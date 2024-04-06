@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etch-a-sketch</title>
+    <script src="javascript.js" defer></script>
+    <style>
+        .grid-container{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 400px;
+        }
+        .grid-item{
+            flex: 1 0 calc(100% / var(--size));  
+            aspect-ratio: 1;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        .my-colour{
+            background-color: red;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            padding: 50px;
+        }
+        body{
+            background-color: rgb(248, 243, 237);
+        }
+        
+    </style>
+</head>
+<body>
+    <button id="gridBtn">Change grid size</button>
+    <div class="container">
+        <div id="gridContainer" class="grid-container"></div>
+    </div>
+        
+</body>
+</html>
