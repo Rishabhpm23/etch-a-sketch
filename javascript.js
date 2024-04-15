@@ -1,4 +1,5 @@
 const gridBtn = document.getElementById('gridBtn');
+let squareNumber;
     if(gridBtn){
         gridBtn.addEventListener('click', () => {
             const squareNumber = prompt('Enter number of squares per side(max = 100)');
@@ -20,12 +21,15 @@ const gridBtn = document.getElementById('gridBtn');
         })
 
     }
-    // const resetBtn = document.getElementById('resetBtn');
-    //     if(resetBtn){
-    //         resetBtn.addEventListener('click', () => {
-    //             for (let i = 0; i < squareNumber * squareNumber; i++) {
-    //                 document.getElementById('gridItem');
-    //                 gridItem.classList.toggle('my-colour2');
-    //             }
-    //         })
-    //     }
+    const resetBtn = document.getElementById('resetBtn');
+        if(resetBtn){
+            resetBtn.addEventListener('click', () => {
+                for (let i = 0; i < squareNumber * squareNumber; i++) {
+                    document.querySelector('.grid-item');
+                    // gridItem.classList.toggle('my-colour2');
+                    grid-item.classList.remove('my-colour1');
+                    
+
+                }
+            })
+        }
