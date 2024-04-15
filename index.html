@@ -9,7 +9,13 @@
         .grid-container{
             display: flex;
             flex-wrap: wrap;
-            max-width: 400px;
+            height: 600px;
+            width: 600px;
+            background-color: white;
+            border: 10px solid black;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
         }
         .grid-item{
             flex: 1 0 calc(100% / var(--size));  
@@ -17,8 +23,11 @@
             box-sizing: border-box;
             border: 1px solid black;
         }
-        .my-colour{
+        .my-colour1{
             background-color: red;
+        }
+        .my-colour2{
+            background-color: white;
         }
         .container{
             display: flex;
@@ -27,17 +36,53 @@
             margin-top: 100px;
             padding: 50px;
         }
-        body{
-            background-color: rgb(248, 243, 237);
+        html, body{
+            background-color: rgb(78, 195, 241); 
+            height: 100%;
+            width: 100%; 
         }
+        .outerBody{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+        } 
+        .buttonSide{
+            padding: 20px;
+        }
+        .grid-btn, .reset-btn{
+            background-color: #0a77f3; 
+            border: 3px solid black;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        .buttonSide{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
         
     </style>
 </head>
 <body>
-    <button id="gridBtn">Change grid size</button>
-    <div class="container">
-        <div id="gridContainer" class="grid-container"></div>
-    </div>
+    <div class="outerBody">
+        <div class="buttonSide">
+            <button id="gridBtn" class="grid-btn">Change grid size</button>
+            <button id="resetBtn" class="reset-btn">Reset</button>
+        </div>
         
+        <div class="container">
+            <div id="gridContainer" class="grid-container"></div>
+        </div>
+    </div>
 </body>
 </html>
