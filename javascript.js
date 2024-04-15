@@ -25,10 +25,9 @@ let squareNumber;
         if(resetBtn){
             resetBtn.addEventListener('click', () => {
                 let grids = document.querySelectorAll(".grid-item")
-                for (let i = 0; i < grids.length; i++) {
-                    grids.forEach((grid) => {
-                        grid.classList.remove('my-color1');
-                    })
+                grids.forEach((grid) => {
+                    grid.classList.remove('my-colour1');
+                })
                 }
-            })
-        }
+            )}
+        
